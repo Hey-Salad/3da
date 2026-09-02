@@ -14,19 +14,20 @@
   },
   "project": {
     "name": "3DA",
-    "summary": "An agent-native operating system for booking, designing, slicing, monitoring, and managing shared 3D printers from the web and Codex.",
+    "summary": "An open-source, local-first operating layer for safely sharing, booking, approving, and monitoring real 3D printers from the web and Codex through WebMCP.",
     "ai_usage": "",
     "codex_usage": ""
   },
   "current_stage": "resources",
   "completed_stages": [
     "start-hackathon",
-    "review"
+    "review",
+    "resources"
   ],
   "rules_acknowledged": true,
   "learning": {
-    "status": "not-started",
-    "current_step": "",
+    "status": "active",
+    "current_step": "onboard",
     "completed_steps": [],
     "plan_file": "",
     "checklist_file": ""
@@ -35,5 +36,5 @@
     "draft_file": "devpost-submission.md",
     "status": "not-started"
   },
-  "next_command": "resources"
+  "next_command": "build-scope"
 }
