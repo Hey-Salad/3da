@@ -29,3 +29,18 @@
 - Deepening results: immediate and future reservations; artifact upload; technician preparation tasks; camera-assisted plate checks; private models/footage for owners and managers; and stakeholder notification with a decision state after failures.
 - Codex added a configurable 15-minute no-show grace period and a fail-safe human check whenever camera evidence is uncertain.
 - Scope cut: AI CAD, slicer replacement, autonomous CV cancellation, production billing/admin, photorealistic navigation, and universal Bambu support are explicit non-goals.
+
+## 2026-09-02 — Product requirements
+
+- PRD epics confirmed: Discover the Room; Reserve Capacity; Prepare the Job; Review and Approve; Print, Monitor, and Collect; Operate and Audit.
+- First-open behaviour confirmed: enter the Room directly with a short first-run overlay and clear actions.
+- Codex-to-web behaviour confirmed: conversational discovery/reservation plus deep links to exact visual review, approval, and incident contexts.
+- Reservation detail confirmed: machine, time, owner, artifact, material, preparation, and expiry remain consistent across Room and Operations.
+- Technician workflow confirmed: required physical preparation keeps the job waiting until checklist completion.
+- Equivalent approval in Codex and web confirmed; approval is specific, single-use, time-bounded, and invalidated by consequential changes.
+- Conflict behaviour confirmed: exactly one reservation succeeds and alternatives are offered to the other requester.
+- Offline/failure behaviour confirmed: preserve the job, avoid automatic submission, and present deliberate next actions.
+- Privacy and persistence defaults confirmed: availability is shared; detailed artifacts/camera/job information is restricted; state persists across surfaces.
+- Deepening round count: 1.
+- Deepening decisions: printers remain `Awaiting collection` until the plate is clear; managers can override with a recorded reason; preparation/approval become stale when job details change; first-come-first-served plus a transparent waitlist; private artifact/camera retention defaults to seven days with owner deletion.
+- Active shaping: the participant repeatedly selected the recommended safety and fairness defaults and requested evidence-led decisions rather than subjective design choices.
