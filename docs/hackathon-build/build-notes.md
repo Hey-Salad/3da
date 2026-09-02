@@ -44,3 +44,21 @@
 - Deepening round count: 1.
 - Deepening decisions: printers remain `Awaiting collection` until the plate is clear; managers can override with a recorded reason; preparation/approval become stale when job details change; first-come-first-served plus a transparent waitlist; private artifact/camera retention defaults to seven days with owner deletion.
 - Active shaping: the participant repeatedly selected the recommended safety and fairness defaults and requested evidence-led decisions rather than subjective design choices.
+
+## 2026-09-02 — Technical specification
+
+- Stack approved: Next.js/TypeScript on Vercel; Cloudflare Worker control API; D1 system of record; private R2 artifacts/evidence; Node/TypeScript Mac mini bridge; React Three Fiber Room.
+- The participant selected Cloudflare D1 and R2 rather than a separate managed database/auth/storage suite.
+- Real integration code is reported to be on the Mac mini; VNC inspection was blocked by the renewed password screen, so the adapter interface is specified independently and implementation will inventory the bridge after access is restored.
+- A1 developer/LAN mode and local-only credential storage confirmed.
+- Control topology approved: Worker owns policy and D1/R2; Mac mini initiates outbound command claim/ack traffic.
+- Reliability decision: verified pre-sliced 3MF is the live-demo path; Bambu Studio CLI remains a version-tested adapter because current upstream reports show CLI variability.
+- Public access decision: simulator by default; real printer actions require a protected operator session.
+- WebMCP contract approved through the participant’s request to continue: shared result envelope, stable tools, idempotency, fingerprint-bound approval, strict mode isolation, and reconciliation after uncertain acknowledgement.
+- Architecture self-review cut custom production auth, real-time streaming, universal adapters, and automatic slicing from the critical first slice.
+- Deepening round count: 0 at initial specification; architecture self-review findings are recorded in `spec.md` for checklist prioritisation.
+- Independent review result: initial spec was NO-GO due to agent-callable approval, lease-based duplicate execution risk, unverified object bytes, missing pending state, and an unproven A1 execution mechanism.
+- Corrections applied: approval became a user-activated action-bound challenge; commands become non-reclaimable after claim and use printer fencing; the bridge verifies artifact bytes; `SUBMISSION_PENDING` was added; printer/reservation/job state machines were separated; reservation duration is enforced; real-session/CSRF boundaries were specified; and an A1 capability spike became build gate zero.
+- Submission MVP cut to five tools, approval UI, immediate real A1 path, Room/minimal audit, and public simulator. Remaining PRD behavior is stretch or seeded demonstration until the core is green.
+- Second review resolved schema drift by adding explicit approval challenge records/endpoints and printer fencing fields. The XIAO future-booking moment is now a seeded preview unless its full tests pass.
+- Conditional verdict: architecture is GO after the real A1 capability spike proves observe, start, identify, monitor, reconcile, and cancel on the Mac mini.

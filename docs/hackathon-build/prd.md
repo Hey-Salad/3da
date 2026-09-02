@@ -289,7 +289,7 @@ Acceptance criteria:
 - Submission succeeds only with a current matching reservation, completed preparation, and valid unused approval.
 - A submission attempt without any one of those conditions creates no printer-side action and explains what is missing.
 - Repeating the same request does not create a second physical job.
-- A successful submission changes the job and printer to `Printing` and records the printer’s acknowledgement.
+- A successful control-plane submission changes the job to `Submission pending`. Only a verified printer acknowledgement changes the job and printer to `Printing`.
 
 #### Story 5.2 — Monitor one truthful state
 
@@ -437,7 +437,9 @@ Acceptance criteria:
 
 ## What We Are Building
 
-The submission build includes the six epics above for the narrow real A1 golden path, with a polished Room view, functional Operations view, Codex/WebMCP interaction, immediate and future reservations, preparation and approval, truthful monitoring, collection clearance, privacy boundaries, audit evidence, and a contract-equivalent simulator.
+The required submission MVP is the narrow real A1 golden path: five tools (`list_printers`, `reserve_printer`, `prepare_print_job`, `submit_print_job`, and `get_print_status`), a user-activated approval surface, one immediate reservation, a polished Room view with minimal audit timeline, and a contract-equivalent public simulator.
+
+The remaining epic behavior defines the coherent product and may be shown through seeded interface states, but future booking, waitlists, technician workflows, arbitrary artifact upload, incident resolution, SMS/CV, and the full Operations workflow are stretch implementations unless the golden path is already green. Submission wording must distinguish implemented behavior from designed roadmap behavior.
 
 Features marked conditional—SMS delivery, camera-based inference, manual-activity detection, and additional Bambu adapters—are included only after the core path is verified.
 
