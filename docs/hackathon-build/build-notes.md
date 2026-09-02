@@ -73,3 +73,4 @@
 - Bambu Studio currently shows no bound printer. No access codes were opened, copied, or logged, and no printer command was sent.
 - Gate 0 is partial: live binding, status observation, artifact transfer, physical start, acknowledgement, reconciliation, and guarded cancellation remain to be proven.
 - Implementation began with a pnpm workspace, Next.js Room surface, shared Zod contracts, simulator printer data, deterministic reservation policy, and unit tests.
+- Vercel deployment uses an explicit root-level monorepo configuration so the hosted project builds `apps/web` as Next.js rather than treating the repository as a generic static site.
