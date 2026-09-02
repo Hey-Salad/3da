@@ -14,7 +14,7 @@ The product centres shared-space orchestration and safe WebMCP control—not AI-
 
 ## Current status
 
-Planning and validation are in progress. The repository currently contains the official-resource research, winner analysis, and the emerging product quality bar. The implementation will be developed through small, verifiable commits.
+The first implementation slice is underway: a Next.js fabrication Room, shared WebMCP contracts, seeded simulator printers, and deterministic reservation policy. Real Bambu discovery has passed for two LAN devices; physical execution remains deliberately gated until binding and a controlled printer test pass.
 
 ## Planned golden path
 

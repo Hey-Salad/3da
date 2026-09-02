@@ -1,0 +1,11 @@
+{
+  "name": "3da",
+  "private": true,
+  "packageManager": "pnpm@11.19.0",
+  "scripts": {
+    "dev": "pnpm --filter @3da/web dev",
+    "build": "pnpm --filter @3da/web build",
+    "test": "pnpm --filter @3da/domain test",
+    "typecheck": "pnpm -r typecheck"
+  }
+}

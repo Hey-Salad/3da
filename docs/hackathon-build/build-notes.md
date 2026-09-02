@@ -62,3 +62,14 @@
 - Submission MVP cut to five tools, approval UI, immediate real A1 path, Room/minimal audit, and public simulator. Remaining PRD behavior is stretch or seeded demonstration until the core is green.
 - Second review resolved schema drift by adding explicit approval challenge records/endpoints and printer fencing fields. The XIAO future-booking moment is now a seeded preview unless its full tests pass.
 - Conditional verdict: architecture is GO after the real A1 capability spike proves observe, start, identify, monitor, reconcile, and cancel on the Mac mini.
+
+## 2026-09-03 — Gate 0 inventory and implementation start
+
+- The protected VNC endpoint resolves to a Linux relay host (`heysalad-ai-01`), not macOS. It already runs an active Cloudflare Tunnel and a Node relay agent on `127.0.0.1:8786`.
+- The existing Sally3D relay targets a Creality CR-10 Smart at `192.168.0.241:81`. That legacy printer was unreachable during the inventory and is not the 3DA A1 adapter.
+- The relay exposes authenticated health, printer status/command, and camera status/frame routes. Its local command allowlist is pause, resume, cancel, fan on, and fan off.
+- Bambu Studio and an existing guarded `heysalad-bambu-printing` Codex/Claude skill are installed on the relay host.
+- Read-only private-subnet discovery found two devices exposing Bambu services on ports 990, 6000, and 8883. Both presented certificates issued by BBL Technologies, passing discovery and vendor-identity checks.
+- Bambu Studio currently shows no bound printer. No access codes were opened, copied, or logged, and no printer command was sent.
+- Gate 0 is partial: live binding, status observation, artifact transfer, physical start, acknowledgement, reconciliation, and guarded cancellation remain to be proven.
+- Implementation began with a pnpm workspace, Next.js Room surface, shared Zod contracts, simulator printer data, deterministic reservation policy, and unit tests.
