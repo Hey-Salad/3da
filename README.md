@@ -25,6 +25,27 @@ The first implementation slice is underway: a Next.js fabrication Room, shared W
 5. Explicitly approve and submit the physical print.
 6. Monitor progress and receive a completion or failure notification.
 
+## Run the simulator locally
+
+Requirements: Node.js 20+ and pnpm.
+
+```bash
+pnpm install
+pnpm dev
+```
+
+Open `http://localhost:3000`. The public build stays in labelled simulation mode. In a WebMCP-enabled browser, the page registers five tools: `list_printers`, `reserve_printer`, `prepare_print_job`, `submit_print_job`, and `get_print_status`. Without WebMCP support, use **Run safety demo** to inspect the same human approval boundary.
+
+```bash
+pnpm test
+pnpm typecheck
+pnpm build
+```
+
+## Challenge-period work
+
+The 3DA app, WebMCP tools, contracts, policy tests, documentation, and simulator were created during The WebMCP Challenge (August 25–September 3, 2026). An older HeySalad Sally3D relay informed the local-network topology but is not included or represented as new challenge code. See the dated [build notes](docs/hackathon-build/build-notes.md) for the distinction and hardware evidence.
+
 ## Trust model
 
 - Deterministic code decides printer compatibility, scheduling conflicts, and policy.
@@ -38,6 +59,7 @@ The first implementation slice is underway: a Next.js fabrication Room, shared W
 - [`research/3da-winner-style-and-quality-bar.md`](research/3da-winner-style-and-quality-bar.md)
 - [`research/openai-hackathon-winner-patterns.md`](research/openai-hackathon-winner-patterns.md)
 - [`research/webmcp-official-resources.md`](research/webmcp-official-resources.md)
+- [`devpost-submission.md`](devpost-submission.md)
 
 ## Licence
 

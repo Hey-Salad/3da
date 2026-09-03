@@ -40,7 +40,7 @@
   },
   "submission": {
     "draft_file": "devpost-submission.md",
-    "status": "not-started"
+    "status": "draft"
   },
-  "next_command": "build"
+  "next_command": "verify-webmcp"
 }
