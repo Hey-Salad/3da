@@ -7,5 +7,8 @@
     "build": "pnpm --filter @3da/web build",
     "test": "pnpm --filter @3da/domain test",
     "typecheck": "pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "next": "16.3.4"
   }
 }
