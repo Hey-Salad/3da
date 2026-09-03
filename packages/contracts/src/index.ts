@@ -29,7 +29,7 @@ export const preparePrintJobInput = z.object({
 export const submitPrintJobInput = z.object({
   jobId: z.string().min(1),
   expectedFingerprint: z.string().min(12),
-  approvalId: z.string().min(1),
+  approvalId: z.string().min(1).optional(),
   idempotencyKey: z.string().min(8)
 });
 

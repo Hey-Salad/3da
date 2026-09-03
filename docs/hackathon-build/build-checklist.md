@@ -21,9 +21,9 @@ Gate status: **PARTIAL**. Discovery and identity passed. Execution remains disab
 - [x] Build the first recognisable London fabrication-room interface.
 - [x] Seed Samantha, Simone, Sanda, Sacha, and Solange in explicit simulator mode.
 - [x] Add deterministic half-open reservation conflict policy and tests.
-- [ ] Register the five browser-native WebMCP tools.
+- [x] Register the five browser-native WebMCP tools.
 - [ ] Implement simulator API with idempotency and audit events.
-- [ ] Add approval challenge sheet and fingerprint invalidation.
+- [x] Add approval challenge sheet and fingerprint invalidation in the simulator slice.
 - [ ] Add Operations timeline and collection state.
 - [ ] Add Cloudflare Worker, D1 migration, and private R2 artifact path.
 - [ ] Adapt the existing Sally relay into the 3DA outbound claim/ack bridge.

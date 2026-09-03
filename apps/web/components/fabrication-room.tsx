@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { printers, type Printer } from "@3da/domain";
+import { useWebMCP } from "@/hooks/use-webmcp";
 
 const statusCopy = {
   AVAILABLE: "Ready to book",
@@ -36,6 +37,7 @@ export function FabricationRoom() {
   const [reserved, setReserved] = useState(false);
   const selected = printers.find((printer) => printer.id === selectedId) ?? printers[0]!;
   const availableCount = printers.filter((printer) => printer.state === "AVAILABLE").length;
+  const webmcp = useWebMCP();
 
   return (
     <main>
@@ -113,10 +115,44 @@ export function FabricationRoom() {
         </div>
       </section>
 
+      <section className="agent-strip" aria-label="WebMCP activity">
+        <div className="agent-strip__icon" aria-hidden="true">✦</div>
+        <div>
+          <span className="eyebrow">Codex connection · {webmcp.supported ? "browser native" : "preview mode"}</span>
+          <strong>{webmcp.activity.title}</strong>
+          <small>{webmcp.activity.detail}</small>
+        </div>
+        <div className="agent-strip__actions">
+          <span className="tool-count">5 structured tools</span>
+          <button className="demo-action" onClick={() => void webmcp.runDemo()}>Run safety demo</button>
+        </div>
+      </section>
+
       <footer>
         <p><strong>3DA keeps the risky bit visible.</strong> Agents can plan and prepare; people approve physical actions.</p>
         <a href="#room">View operations <span aria-hidden="true">→</span></a>
       </footer>
+
+      {webmcp.challenge ? (
+        <div className="approval-backdrop" role="presentation">
+          <section className="approval-sheet" role="dialog" aria-modal="true" aria-labelledby="approval-title">
+            <span className="approval-sheet__flag">Human decision required</span>
+            <h2 id="approval-title">Ready to send this job to Samantha?</h2>
+            <p>The agent has finished planning. This confirmation is bound to one job version and cannot be reused if the machine, file, material, or settings change.</p>
+            <dl>
+              <div><dt>Artifact</dt><dd>OpenAI token · verified 3MF</dd></div>
+              <div><dt>Printer</dt><dd>Samantha · Bambu Lab A1</dd></div>
+              <div><dt>Material</dt><dd>18.4 g · Jade white PLA</dd></div>
+              <div><dt>Time</dt><dd>42 min + 10 min cleanup</dd></div>
+              <div><dt>Mode</dt><dd>Simulation · no physical action</dd></div>
+            </dl>
+            <div className="approval-sheet__actions">
+              <button className="secondary-action" onClick={webmcp.decline}>Not now</button>
+              <button className="primary-action" onClick={webmcp.approve}>Approve this exact job</button>
+            </div>
+          </section>
+        </div>
+      ) : null}
     </main>
   );
 }

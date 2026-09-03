@@ -29,6 +29,9 @@ importers:
       react-dom:
         specifier: 19.2.8
         version: 19.2.8(react@19.2.8)
+      webmcp-types:
+        specifier: 0.1.5
+        version: 0.1.5
       zod:
         specifier: 4.5.4
         version: 4.5.4
@@ -792,6 +795,9 @@ packages:
       jsdom:
         optional: true
 
+  webmcp-types@0.1.5:
+    resolution: {integrity: sha512-QAfuzNJ+hiY2JLpPbD/6xZruLQlsqtWUDqQCRruqD0dbtZHDg6IUZ2K0zctlRokwuscGlr47i6hKv8mQPSQLhw==}
+
   why-is-node-running@2.3.0:
     resolution: {integrity: sha512-hUrmaWBdVDcxvYqnyh09zunKzROWjbZTiNy8dBEjkS7ehEDQibXJ7XvlmtbwuTclUiIyN+CyXQD4Vmko8fNm8w==}
     engines: {node: '>=8'}
@@ -1324,6 +1330,8 @@ snapshots:
       '@types/node': 24.13.3
     transitivePeerDependencies:
       - msw
+
+  webmcp-types@0.1.5: {}
 
   why-is-node-running@2.3.0:
     dependencies:
