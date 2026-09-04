@@ -130,7 +130,7 @@ export function FabricationRoom() {
 
       <footer>
         <p><strong>3DA keeps the risky bit visible.</strong> Agents can plan and prepare; people approve physical actions.</p>
-        <a href="#room">View operations <span aria-hidden="true">→</span></a>
+        <a href="/demo">Open guided demo <span aria-hidden="true">→</span></a>
       </footer>
 
       {webmcp.challenge ? (
