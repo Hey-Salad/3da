@@ -169,11 +169,26 @@ footer a { color: var(--ink); font-weight: 800; text-decoration: none; }
 .demo-primary:disabled { opacity: .45; box-shadow: none; cursor: not-allowed; }
 .demo-entry__card > .demo-primary { width: 100%; padding: 17px 20px; font-size: 17px; }
 .demo-entry__note { display: block; margin-top: 20px; color: #6d7872; text-align: center; }
-.demo-console { min-height: 100vh; display: grid; grid-template-rows: 78px minmax(0,1fr) 88px; overflow: hidden; background: #dde5da; }
+.demo-console { min-height: 100vh; display: grid; grid-template-rows: 78px 92px minmax(0,1fr) 88px; overflow: hidden; background: #dde5da; }
 .demo-console__topbar { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 0 28px; border-bottom: 1px solid var(--line); background: var(--paper); }
 .demo-console__brand { display: flex; align-items: center; gap: 9px; color: inherit; font-size: 23px; font-weight: 900; text-decoration: none; }
 .demo-console__topbar > div:nth-child(2) { display: grid; gap: 2px; text-align: center; }
 .demo-console__badges { justify-self: end; display: flex; gap: 8px; }
+.hardware-proof { display: grid; grid-template-columns: minmax(270px,1.15fr) 1fr 1fr auto; align-items: center; gap: 12px; padding: 10px 28px; border-bottom: 1px solid var(--line); background: #17221d; color: white; }
+.hardware-proof__intro { display: grid; gap: 2px; }
+.hardware-proof__intro .demo-kicker { color: var(--lime); }
+.hardware-proof__intro strong { font-size: 14px; }
+.hardware-proof__intro small { color: #aebdb4; font-size: 10px; }
+.hardware-printer { display: grid; grid-template-columns: 38px 1fr auto; align-items: center; gap: 10px; padding: 9px 11px; border: 1px solid rgba(255,255,255,.14); border-radius: 12px; background: rgba(255,255,255,.06); }
+.hardware-printer > div { display: grid; gap: 2px; min-width: 0; }
+.hardware-printer strong { font-size: 14px; }
+.hardware-printer small { overflow: hidden; color: #b7c5bd; font-size: 10px; text-overflow: ellipsis; white-space: nowrap; }
+.hardware-printer__icon { position: relative; width: 34px; height: 35px; border: 3px solid #b9c7bf; border-bottom-width: 5px; border-radius: 3px; }
+.hardware-printer__icon i { position: absolute; top: 10px; left: 0; right: 0; height: 3px; background: #b9c7bf; }
+.hardware-printer__icon b { position: absolute; top: 6px; left: 14px; width: 6px; height: 13px; border-radius: 1px; background: var(--orange); }
+.hardware-printer__state { display: flex; align-items: center; gap: 5px; color: #d6ff69; font-size: 10px; font-weight: 800; text-transform: uppercase; }
+.hardware-printer__state i { width: 7px; height: 7px; border-radius: 50%; background: #59d48c; box-shadow: 0 0 0 4px rgba(89,212,140,.13); }
+.hardware-proof__boundary { max-width: 150px; color: #aebdb4; font-size: 10px; line-height: 1.35; text-align: right; }
 .demo-badge { padding: 8px 11px; border: 1px solid var(--line); border-radius: 999px; background: var(--cream); font-size: 12px; font-weight: 750; }
 .demo-badge--live { color: var(--green); }
 .demo-badge i, .agent-state i { display: inline-block; width: 7px; height: 7px; margin-right: 6px; border-radius: 50%; background: #36b978; box-shadow: 0 0 0 4px rgba(54,185,120,.14); }
@@ -226,6 +241,8 @@ footer a { color: var(--ink); font-weight: 800; text-decoration: none; }
 
 @media (max-width: 1100px) {
   .demo-console { min-height: auto; overflow: visible; }
+  .hardware-proof { grid-template-columns: 1fr 1fr; }
+  .hardware-proof__boundary { display: none; }
   .demo-stage { grid-template-columns: 1fr 1fr; }
   .demo-boundary { grid-column: 1 / -1; min-height: 520px; }
 }
@@ -237,6 +254,7 @@ footer a { color: var(--ink); font-weight: 800; text-decoration: none; }
   .demo-console__topbar { grid-template-columns: 1fr auto; height: 72px; }
   .demo-console__topbar > div:nth-child(2) { display: none; }
   .demo-console__badges .demo-badge:last-child { display: none; }
+  .hardware-proof { grid-template-columns: 1fr; padding: 14px; }
   .demo-stage { grid-template-columns: 1fr; }
   .demo-boundary { grid-column: auto; }
   .demo-controls { position: sticky; bottom: 0; grid-template-columns: 1fr auto; min-height: 80px; }

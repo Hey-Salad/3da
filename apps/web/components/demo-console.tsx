@@ -121,6 +121,25 @@ export function DemoConsole() {
         <div className="demo-console__badges"><span className="demo-badge demo-badge--live"><i /> WebMCP connected</span><span className="demo-badge">Simulation</span></div>
       </header>
 
+      <section className="hardware-proof" aria-label="Verified Bambu hardware connection">
+        <div className="hardware-proof__intro">
+          <span className="demo-kicker">Hardware proof · Mac mini bridge</span>
+          <strong>2 real Bambu A1 printers verified on the private LAN</strong>
+          <small>Read-only discovery + BBL Technologies device identity. Credentials remain on site.</small>
+        </div>
+        <article className="hardware-printer">
+          <span className="hardware-printer__icon" aria-hidden="true"><i /><b /></span>
+          <div><strong>Samantha</strong><small>Bambu Lab A1 · LAN Developer Mode</small></div>
+          <span className="hardware-printer__state"><i /> Paired</span>
+        </article>
+        <article className="hardware-printer">
+          <span className="hardware-printer__icon" aria-hidden="true"><i /><b /></span>
+          <div><strong>Simone</strong><small>Bambu Lab A1 · LAN Developer Mode</small></div>
+          <span className="hardware-printer__state"><i /> Paired</span>
+        </article>
+        <span className="hardware-proof__boundary">Live connectivity proof · simulated command execution</span>
+      </section>
+
       <section className="demo-stage" aria-live="polite">
         <aside className="demo-panel demo-brief">
           <div className="demo-panel__heading"><span className="demo-kicker">01 · Member</span><h2>The request</h2></div>
